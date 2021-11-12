@@ -1,5 +1,7 @@
 import { fetchCurrency } from "../helpers/fetchBtcApi";
 
+// Make the conversion from BTC -> BRL,USD or EUR
+// It first convert BTC to BRL mandatory, then it will exchange the BRL to the desired currency
 export async function convertion(convertionRateBTC_BRL, amount, currencyType) {
   try {
     const toBRL = convertionRateBTC_BRL * amount;

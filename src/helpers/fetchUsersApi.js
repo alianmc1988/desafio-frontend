@@ -8,7 +8,9 @@ const API_CONFIG = {
 };
 
 export default {
+  // fetch all the users without pagination
   getUnrestrictedUsers: async function() {
+    // fetch all the users without pagination
     try {
       const res = await fetch(API_CONFIG.url);
       const data = await res.json();
@@ -87,7 +89,7 @@ export default {
     const userFinded = data.find((el) => el.email == email);
     return userFinded;
   },
-  // Get Users by Paginations
+  // Get Users with Paginations
   getAllUser: async (page) => {
     try {
       const response = await fetch(API_CONFIG.url + `/?_page=${page}`);

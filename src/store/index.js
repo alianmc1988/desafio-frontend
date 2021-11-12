@@ -8,7 +8,7 @@ export const store = new Vuex.Store({
     listUsers: [],
     showModal: false,
     listUsersFinded: [],
-    currentPage: 1,
+    currentPage: 1, //Index for pagination
   },
   mutations: {
     // ListUsers Mutations
